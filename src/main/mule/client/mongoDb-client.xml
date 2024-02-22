@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:mongo="http://www.mulesoft.org/schema/mule/mongo" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/mongo http://www.mulesoft.org/schema/mule/mongo/current/mule-mongo.xsd">
+	<mongo:config name="MongoDB_Config" doc:name="MongoDB Config" doc:id="aac936e1-6259-4ffc-9c7b-1e6b090e0087" >
+		<mongo:connection-string-connection connectionString="mongodb+srv://schoolmulesoft:ILTWTjJ6wZZN6GQw@mulesotfschool.dgjzjia.mongodb.net/app?retryWrites=true&amp;w=majority" />
+	</mongo:config>
+	<sub-flow name="mongoDb-clientSub_Flow" doc:id="eff72c6b-8928-4280-be93-e71c83f10ca7" >
+		<mongo:find-documents doc:name="Find documents" doc:id="05eb6be6-a195-4f36-adef-4b809d4eea41" config-ref="MongoDB_Config" collectionName="users" fields=",">
+			<mongo:query ><![CDATA[{}]]></mongo:query>
+			<mongo:sort-by ><![CDATA[{}]]></mongo:sort-by>
+		</mongo:find-documents>
+	</sub-flow>
+</mule>

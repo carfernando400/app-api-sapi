@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:mongo="http://www.mulesoft.org/schema/mule/mongo" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/mongo http://www.mulesoft.org/schema/mule/mongo/current/mule-mongo.xsd">
+	<sub-flow name="post-login-users-orchestratorSub_Flow" doc:id="c66bb90d-336b-40a2-8db4-3c48d92d71bb" >
+		<flow-ref doc:name="Go to client" doc:id="597aa9cb-cb21-43e4-92db-9d29fc253c88" name="mongoDb-clientSub_Flow"/>
+	</sub-flow>
+</mule>
